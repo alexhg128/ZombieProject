@@ -6,31 +6,19 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: birdhouse_collision
-    100004: birdhouse_LOD0
     400000: //RootNode
-    400002: birdhouse_collision
-    400004: birdhouse_LOD0
     2300000: //RootNode
-    2300002: birdhouse_collision
-    2300004: birdhouse_LOD0
     3300000: //RootNode
-    3300002: birdhouse_collision
-    3300004: birdhouse_LOD0
     4300000: birdhouse
-    4300002: birdhouse_LOD0
-    4300004: birdhouse_collision
-    6400000: birdhouse_collision
-    6400002: birdhouse_LOD0
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -49,7 +37,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
