@@ -42,7 +42,7 @@ public class RaycastShoot : MonoBehaviour
             laserLine.SetPosition(1, rayEnd.position);
             if(Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
             {
-                ShootableBox health = hit.collider.GetComponent<ShootableBox>();
+                ShootableZombie health = hit.collider.GetComponent<ShootableZombie>();
 
                 // If there was a health script attached
                 if (health != null)
