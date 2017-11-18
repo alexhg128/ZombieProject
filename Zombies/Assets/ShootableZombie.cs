@@ -6,7 +6,7 @@ using System.Collections;
 public class ShootableZombie : MonoBehaviour {
 
 	//The box's current health point total
-	public int currentHealth = 3;
+	public int currentHealth = 1;
     public Text txt;
     public GameObject go;
 

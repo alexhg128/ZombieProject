@@ -10,6 +10,7 @@ public class zombieScript : MonoBehaviour {
 	public bool t = false;
 	public float distanceMax;
 	public int damage;
+	public bool isDead;
 
 	//  initialization
 	void Start () {
@@ -21,22 +22,7 @@ public class zombieScript : MonoBehaviour {
 		agent.destination = goal.position;
 		//empezar a caminar animation
 		GetComponent<Animation>().Play ("walk");
-		/*GameObject zombie = Instantiate(Resources.Load("zombie", typeof(GameObject))) as GameObject;
 
-		//poner las coordenadas al nuevo V3
-		float randomX = UnityEngine.Random.Range (-48f,0f);
-		float constantY = .01f;
-		float randomZ = UnityEngine.Random.Range (-32f,39f);
-		//poner la posición del zombie a estas condenadas
-		zombie.transform.position = new Vector3 (randomX, constantY, randomZ);
-
-		//si el zombie esta de 3 o menos pies no podremos dispararle al zombie
-		//reposicional al zombie asta que se le pueda disparar        while (Vector3.Distance (zombie.transform.position, Camera.main.transform.position) <= 5) {
-
-		randomX = UnityEngine.Random.Range (-48f,0f);
-		randomZ = UnityEngine.Random.Range (-32f,39f);
-
-		zombie.transform.position = new Vector3 (randomX, constantY, randomZ);*/
 
 	}
 
@@ -49,8 +35,10 @@ public class zombieScript : MonoBehaviour {
 		HPCounter script = GameObject.Find ("Life").GetComponent<HPCounter> ();
 		Vector3 uZ = gameObject.transform.position;
 		Vector3 uP = GameObject.Find ("FirstPersonCharacter").transform.position;
-		if (distance(uP, uZ) < distanceMax) {
+		if ((distance(uP, uZ) < distanceMax)&&isDead==false) {
 			script.Damage (damage);
+			//Return to true just in case that the zombie is not destroyed for some weird reason
+			isDead = true;
 		}
 	}
 
@@ -65,32 +53,16 @@ public class zombieScript : MonoBehaviour {
 		//evita que aya múltiples colisiones
 		t = true;
 		GetComponent<CapsuleCollider>().enabled = false;
-		//Destruir la bala
-		//Destroy(col.gameObject);
+		//If the zombie has died let the system know it has died so it can't make damage
+		isDead = true;
 		// Esto evita que le zombie se siga moviendo
 		agent.destination = gameObject.transform.position;
 		//parar la animación de movimiento por y poner la de chida
 		GetComponent<Animation>().Stop ();
 		GetComponent<Animation>().Play ("back_fall");
-		//destruir en 2 segundos.
+		//destruir en 1 segundo.
 		Destroy (gameObject, 1);
-		//saca a otro zombie
-		/*GameObject zombie = Instantiate(Resources.Load("zombie", typeof(GameObject))) as GameObject;
 
-		//poner las coordenadas al nuevo V3
-		float randomX = UnityEngine.Random.Range (-48f,0f);
-		float constantY = .01f;
-		float randomZ = UnityEngine.Random.Range (-32f,39f);
-		//poner la posición del zombie a estas condenadas
-		zombie.transform.position = new Vector3 (randomX, constantY, randomZ);
-
-		//si el zombie esta de 3 o menos pies no podremos dispararle al zombie
-		//reposicional al zombie asta que se le pueda disparar        while (Vector3.Distance (zombie.transform.position, Camera.main.transform.position) <= 5) {
-
-			randomX = UnityEngine.Random.Range (-48f,0f);
-			randomZ = UnityEngine.Random.Range (-32f,39f);
-
-		zombie.transform.position = new Vector3 (randomX, constantY, randomZ);*/
 	}
 
 }

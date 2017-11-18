@@ -27,3 +27,32 @@
 /Users/ophacks/Desktop/Copia de ZoombieProject/Zombies/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/ophacks/Desktop/Copia de ZoombieProject/Zombies/obj/Debug/Assembly-CSharp.dll
 /Users/ophacks/Desktop/Copia de ZoombieProject/Zombies/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/obj/Debug/Assembly-CSharp.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEditor.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.UIAutomation.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/nunit.framework.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.Timeline.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.SpatialTracking.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.Cecil.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/ExCSS.Unity.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.DataContract.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.Legacy.NRefactory.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.Cecil.Pdb.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Unity.Cecil.Mdb.dll
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/andresruiznavejas/Desktop/ZoombieProject/Zombies/Temp/bin/Debug/Assembly-CSharp.dll
