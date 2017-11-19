@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class zombieScript : MonoBehaviour {
 	//declarar el transform of our goal (donde el navmesh se moverá para enfrente) el navmesh agent (en este caso nuestro zombie)
@@ -12,9 +13,9 @@ public class zombieScript : MonoBehaviour {
 	public int damage;
 	public bool isDead;
 
+
 	//  initialization
 	void Start () {
-
 		//create references
 		goal = Camera.main.transform;
 		agent = GetComponent<NavMeshAgent>();
@@ -37,16 +38,16 @@ public class zombieScript : MonoBehaviour {
 		Vector3 uP = GameObject.Find ("FirstPersonCharacter").transform.position;
 
 			if ((distance (uP, uZ) < distanceMax) && isDead == false) {
-			GetComponent<Animation>().Play ("attack");
+			    GetComponent<Animation>().Play ("attack");
 				script.Damage (damage);
 				//Return to true just in case that the zombie is not destroyed for some weird reason
 				
 		}
-		else  { GetComponent<Animation>().Play ("walk"); 
+		else  { if ( t == false ) {
+				GetComponent<Animation>().Play ("walk"); 
 		}
-
+		}
 	}
-
 	private float distance(Vector3 v1, Vector3 v2)
 	{
 		return Mathf.Sqrt (Mathf.Pow (v1.x - v2.x, 2) + Mathf.Pow (v1.z - v2.z, 2));
