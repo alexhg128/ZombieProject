@@ -35,11 +35,16 @@ public class zombieScript : MonoBehaviour {
 		HPCounter script = GameObject.Find ("Life").GetComponent<HPCounter> ();
 		Vector3 uZ = gameObject.transform.position;
 		Vector3 uP = GameObject.Find ("FirstPersonCharacter").transform.position;
-		if ((distance(uP, uZ) < distanceMax)&&isDead==false) {
-			script.Damage (damage);
-			//Return to true just in case that the zombie is not destroyed for some weird reason
-			isDead = true;
+
+			if ((distance (uP, uZ) < distanceMax) && isDead == false) {
+			GetComponent<Animation>().Play ("attack");
+				script.Damage (damage);
+				//Return to true just in case that the zombie is not destroyed for some weird reason
+				
 		}
+		else  { GetComponent<Animation>().Play ("walk"); 
+		}
+
 	}
 
 	private float distance(Vector3 v1, Vector3 v2)
@@ -60,8 +65,8 @@ public class zombieScript : MonoBehaviour {
 		//parar la animación de movimiento por y poner la de chida
 		GetComponent<Animation>().Stop ();
 		GetComponent<Animation>().Play ("back_fall");
-		//destruir en 1 segundo.
-		Destroy (gameObject, 1);
+		//destruir en  segundo.
+		Destroy (gameObject, 5);
 
 	}
 
