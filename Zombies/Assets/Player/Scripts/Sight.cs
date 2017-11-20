@@ -12,7 +12,7 @@ public class Sight : MonoBehaviour {
     // Use this for initialization
     void Start () {
         cam.fieldOfView = 60f;
-        img.enabled = false;
+        img.enabled = true;
 	}
 	
 	// Update is called once per frame

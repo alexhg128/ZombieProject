@@ -10,10 +10,17 @@ public class PlayButton : MonoBehaviour {
 	void Start () {
         Button btn = button.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+
     }
 
     void Update()
-    {
+	{
+
+		//if(SceneManager.GetSceneByName !="Main"){
+			
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		
         if(Input.GetButtonDown("Fire1"))
         {
             TaskOnClick();
@@ -22,6 +29,6 @@ public class PlayButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void TaskOnClick () {
-        SceneManager.LoadScene("test", LoadSceneMode.Single);
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
 }
