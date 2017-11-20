@@ -21,12 +21,17 @@ public class HPCounter : MonoBehaviour {
 
     void Start()
     {
+		//Find text labels
         txt = GameObject.Find("Life").GetComponent<Text>();
         xt = GameObject.Find("Zombies").GetComponent<Text>();
         script = xt.GetComponent<ZombieCounter>();
+		//Initialize life to 100
         life = 100;
+		//Initialize the timer counter to 1.5f
 		nextDamage = Time.time + 1.5f;
+		//Initialize the hearts 
         initHearts();
+		//Find audio sources
 		no = GameObject.Find ("Nooo").GetComponent<AudioSource>();
 		golpe = GameObject.Find ("Golpe").GetComponent<AudioSource>();
     }
@@ -34,12 +39,14 @@ public class HPCounter : MonoBehaviour {
     public void Damage(int damage)
     {
 		if (Time.time > nextDamage) {
-			
+			//Reduce the life 
 			life -= damage;
 			nextDamage = Time.time + 1.5f;
 			golpe.Play ();
 		}
+		//Print the life left of the player
         txt.text = "HP " + life.ToString();
+		//Hide the hearts depending on the damage
         if(life <= 90)
         {
             heart5.texture = halfHeart;
@@ -78,6 +85,7 @@ public class HPCounter : MonoBehaviour {
         }
         if (life <= 0)
         {
+			//Load GameOver scene if there's no more life left
             GameOver(script.getCurrentZombies(), Time.timeSinceLevelLoad);
 			no.Play ();
         }
@@ -86,8 +94,10 @@ public class HPCounter : MonoBehaviour {
 
     public void GameOver(int zom, float t)
     {
+		//Print how many zombies were killed and the time 
         PlayerPrefs.SetInt("Zombies", zom);
         PlayerPrefs.SetFloat("Time", t);
+		//Load GameOver scene
         SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
